@@ -1,12 +1,13 @@
 #include <glad/glad.h>
 #include <GLFW/glfw3.h>
+#include <Renderer.h>
 #include <iostream>
 
 void framebuffer_size_callback(GLFWwindow* window, int width, int height) {
     glViewport(0, 0, width, height);
 }
 
-int main() {
+int functions_start() {
     // Initialiser GLFW
     if (!glfwInit()) {
         std::cerr << "Failed to initialize GLFW" << std::endl;
@@ -46,4 +47,8 @@ int main() {
     // Terminer GLFW
     glfwTerminate();
     return 0;
+}
+
+int main() {
+    return functions_start();
 }
